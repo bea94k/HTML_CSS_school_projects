@@ -1,0 +1,362 @@
+:root {
+  --primary-color: rgb(3, 75, 3);
+  --light-color: rgb(219, 255, 219);
+  --dark-color: rgb(0, 41, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background: rgb(194, 224, 194);
+  color: var(--dark-color);
+  line-height: 2rem;
+}
+
+.scroll-wrap {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.container {
+  margin: auto 3rem;
+  padding: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  font-family: "Spartan", sans-serif;
+  background: var(--primary-color);
+  color: var(--light-color);
+  width: 100px;
+  height: 50px;
+  border-radius: 3px;
+  margin: 0.5rem 0;
+}
+
+/* HEADER - LOGO AND OUT */
+
+header {
+  background: var(--light-color);
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  /* align-items: center;
+  height: 6rem; */
+  text-transform: uppercase;
+}
+
+.out {
+  grid-column: 3 / span 1;
+  display: grid;
+  align-content: center;
+}
+
+.logo {
+  align-self: center;
+}
+
+header a {
+  color: var(--dark-color);
+  display: block;
+  padding: 1rem;
+  height: 3rem;
+}
+
+/* NAVBAR */
+
+nav {
+  background: var(--primary-color);
+  text-transform: uppercase;
+  height: 4rem;
+}
+
+nav .container {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  height: 3rem;
+  list-style-type: none;
+}
+
+nav a {
+  color: var(--light-color);
+  display: block;
+  border: 3px solid transparent;
+  padding: 1rem;
+  height: 4rem;
+  text-align: center;
+}
+
+nav a:hover {
+  border-bottom: 2px solid var(--light-color);
+  text-decoration: none;
+}
+
+.search {
+  grid-column: 8 / span 1;
+}
+
+/* DROPDOWN */
+
+nav ul li ul {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+nav ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 135px;
+  z-index: 1000;
+  border-radius: 3px;
+}
+
+nav ul li:hover ul li {
+  background: var(--light-color);
+  color: var(--dark-color);
+  display: block;
+}
+
+/* HERO BANNER */
+
+#hero {
+  height: 80vh;
+  width: 100%;
+  background: var(--primary-color);
+  position: relative;
+}
+
+#hero::before {
+  content: "";
+  background: url("https://source.unsplash.com/jwTvCQQJXh0/1920x1080") no-repeat
+    center center/cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hero .container {
+  color: var(--light-color);
+  display: grid;
+  height: 80vh;
+  justify-items: center;
+  align-items: center;
+  /* MAKE SURE THIS ONE WORKS TO CENTER CENTER THE GRID INTO THE HERO BANNER
+ */
+  z-index: 100;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 30vw;
+  grid-template-rows: 100px 200px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-grid h1 {
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.hero-grid h3 {
+  line-height: 2rem;
+  display: grid;
+  align-content: flex-end;
+}
+
+/* EXPLORE THE WOODS & MEET THE INHABITANTS */
+.categories h2 {
+  text-transform: uppercase;
+}
+
+.categories h2,
+.woods-grid {
+  padding: 2rem 0;
+}
+
+.woods-grid {
+  display: grid;
+  height: 70vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.woods-grid div {
+  display: grid;
+  align-content: flex-end;
+  padding: 1rem;
+  color: var(--light-color);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px var(--dark-color);
+  border-radius: 3px;
+
+  transition: all 1s;
+}
+
+.woods-grid div:hover {
+  box-shadow: inset 70px -100px 90px rgba(0, 0, 0, 0.596);
+  text-decoration: underline;
+}
+
+#woods .woods-grid div:first-child {
+  background: url("https://source.unsplash.com/4rDCa5hBlCs/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(2) {
+  background: url("https://source.unsplash.com/sp-p7uuT0tw/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(3) {
+  background: url("https://source.unsplash.com/qLW70Aoo8BE/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(4) {
+  background: url("https://source.unsplash.com/jFCViYFYcus/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(5) {
+  background: url("https://source.unsplash.com/sMQiL_2v4vs/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(6) {
+  background: url("https://source.unsplash.com/KT3WlrL_bsg/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(7) {
+  background: url("https://source.unsplash.com/7ne3hNnojvU/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(8) {
+  background: url("https://source.unsplash.com/-heLWtuAN3c/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(9) {
+  background: url("https://source.unsplash.com/BW9bM5UoLk4/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(10) {
+  background: url("https://source.unsplash.com/7zg5bnhm2X0/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:nth-child(11) {
+  background: url("https://source.unsplash.com/PdPKIkd1L9g/1920x1080") no-repeat
+    center center/cover;
+}
+
+#woods .woods-grid div:last-child {
+  background: url("https://source.unsplash.com/IrGYJPF0JS0/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:first-child {
+  background: url("https://source.unsplash.com/BTzQWyRK474/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(2) {
+  background: url("https://source.unsplash.com/aRXPJnXQ9lU/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(3) {
+  background: url("https://source.unsplash.com/zWA7Obpb4R4/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(4) {
+  background: url("https://source.unsplash.com/mKfgOMYTttU/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(5) {
+  background: url("https://source.unsplash.com/FmUmQJq-BKo/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(6) {
+  background: url("https://source.unsplash.com/15BKEU23L74/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(7) {
+  background: url("https://source.unsplash.com/EYbuaPyfkIY/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(8) {
+  background: url("https://source.unsplash.com/IvdPKHos5wA/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(9) {
+  background: url("https://source.unsplash.com/60UQhQi61mM/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:nth-child(10) {
+  background: url("https://source.unsplash.com/MVIqwQvkwG4/1920x1080") no-repeat
+    center center/cover;
+}
+
+#personas .woods-grid div:last-child {
+  background: url("https://source.unsplash.com/lTebCR71_7A/1920x1080") no-repeat
+    center center/cover;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+footer a {
+  color: var(--light-color);
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8rem;
+}
+
+.contact-terms {
+  grid-column: 4;
+}

@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  line-height: 2rem;
+}
+
+main {
+  /* padding top to push all the content except for the header a bit down, so that main is not a bit hidden under the navbar */
+  padding-top: 10vh;
+}
+
+input {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* UTILITIES - PADDINGS, CONTAINERS, BUTTONS */
+
+.py-2 {
+  padding: 2rem;
+}
+
+.pt-15 {
+  padding-top: 15vh;
+  /* needed to make it look good when clicking in the menu and going down to a section */
+}
+
+.my-2 {
+  margin: 2rem auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  background: #944d4d;
+  color: #fff;
+  border: 2px solid #854444;
+  border-radius: 5px;
+  padding: 0.7rem;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: normal;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 0.6;
+}
+
+.menu-btn i,
+.btn i {
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* HEADER */
+
+header {
+  background: #363636;
+  min-height: 10vh;
+  max-height: 10vh;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+}
+
+/* I CANT MAKE THE HEADER CONTENT CENTERED VERTICALLY LIEK IN THE HERO BANNER */
+
+/* TRY WITH POSITION ABSOLUTE OR OTHER INSTEAD OF FLEX? */
+
+/* header .container {
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo a,
+nav ul li a {
+  color: #fff;
+  display: inline-block;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav:hover #top-nav {
+  display: block;
+}
+
+nav:hover #top-nav li a {
+  display: block;
+  /* to make the whole block clickable, not just the text inside */
+}
+
+#top-nav {
+  display: none;
+  text-align: center;
+}
+
+#top-nav li {
+  background: #363636;
+  border: 1px solid #fff;
+  width: 150px;
+}
+
+#top-nav li:hover {
+  background: #292929;
+}
+
+/* HERO BANNER */
+
+.hero-content {
+  color: #fff;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.5em;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content a {
+  margin: 15px 0;
+}
+
+.hero-content a {
+  background: #f08080;
+}
+
+#hero-banner {
+  height: 90vh;
+  width: 100%;
+  background: #944d4d;
+  position: relative;
+}
+
+#hero-banner::before {
+  content: "";
+  background: url("https://source.unsplash.com/3iT3dnmblGE/1920x1080") no-repeat
+    center center/cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.45;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hero-banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  height: 100%;
+}
+
+/* SECTION A - ABOUT */
+#section-a {
+  background: #fce7e7;
+}
+
+#section-a .container {
+  display: flex;
+}
+
+#section-a img {
+  object-fit: cover;
+  max-height: 350px;
+  width: 100%;
+}
+
+.section-a-content {
+  min-width: 40vw;
+}
+
+.section-a-content ul {
+  margin-left: 2rem;
+}
+
+/* SECTION B - SKILLS */
+#section-b {
+  background: #f9d0d0;
+}
+
+.skill-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.skill {
+  display: inline-block;
+  background: #f08080;
+  border: none;
+  border-radius: 5px;
+  height: 130px;
+  min-width: 200px;
+  margin: 3rem 1rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill:last-child {
+  margin: 3rem 0 2rem;
+  /* to make the boxes even on left and right (margin right on the last child pushes it a bit off symetry) */
+}
+
+/* LOGOS */
+
+.fa-stack {
+  position: relative;
+  top: -3rem;
+}
+
+.fa-circle {
+  color: #fdf3f3;
+}
+
+.fa-html5 {
+  color: #e34f26;
+}
+
+.fa-css3-alt {
+  color: #264de4;
+}
+
+.fa-js-square {
+  color: #e8c012;
+}
+
+.fa-figma {
+  color: #a259ff;
+}
+
+/* PROGRESS BARS */
+
+.progress-bar-background {
+  height: 20px;
+  width: 85%;
+  background: #fce7e7;
+  margin: 0 1rem 1rem;
+}
+
+.progress-bar {
+  background: #944d4d;
+  height: 20px;
+  width: 50%;
+}
+
+.skill:first-child .progress-bar {
+  width: 85%;
+  /* progress bar in HTML */
+}
+
+.skill:nth-child(2) .progress-bar {
+  width: 40%;
+  /* progress bar in CSS */
+}
+
+.skill:nth-child(3) .progress-bar {
+  width: 20%;
+  /* progress bar in JS */
+}
+
+.skill:last-child .progress-bar {
+  width: 20%;
+  /* progress bar in UI design */
+}
+
+/* FOOTER - PORTOFLIO */
+#contact {
+  background: #363636;
+  color: #fff;
+}
+
+#contact .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-content {
+  flex: 1;
+  margin: 0 2rem 2rem 0;
+  min-width: 200px;
+}
+
+form {
+  flex: 1;
+  min-width: 200px;
+  max-width: 60%;
+}
+
+.form-group {
+  display: block;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  width: 100%;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.textarea {
+  height: 6rem;
+}
+
+.send-btn {
+  margin-top: 1rem;
+}
+
+/* BACK TO TOP BUTTON */
+
+.to-top-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  #section-a .container {
+    flex-wrap: wrap;
+  }
+
+  .section-a-content {
+    padding: 2rem 0 0;
+  }
+
+  .fa-css3-alt,
+  .fa-html5,
+  .fa-js-square,
+  .fa-figma {
+    font-size: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content a {
+    padding: 0.4rem;
+  }
+
+  .btn {
+    width: 100px;
+  }
+}

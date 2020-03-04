@@ -1,0 +1,122 @@
+/* PALETTE: dark #222668, mid #6390CB, light #7DC8DB */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8cabd1;
+  color: #032b3f;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  background: #032b3f;
+  text-align: right;
+}
+
+#logo a {
+  float: left;
+  text-transform: uppercase;
+  padding: 8px;
+  margin: 8px;
+  border: 2px solid #8cabd1;
+}
+
+header nav ul li a,
+#logo a {
+  color: #8cabd1;
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  font-size: 22px;
+  padding: 25px 0;
+}
+
+header nav ul li a {
+  padding: 25px;
+}
+
+header nav ul li a:hover {
+  background-color: #8cabd1;
+  color: #032b3f;
+}
+
+/* SECTIONS */
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  background: rgb(171, 194, 225, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.container h2 {
+  padding-bottom: 20px;
+}
+
+.container img {
+  float: left;
+  width: 270px;
+  height: 160px;
+  /* setting either width or height will keep the proportions of the picture - careful not to mess it up too much */
+  margin: 10px 20px 0 0;
+  border-radius: 15px;
+}
+
+.container p {
+  /* line-height: 30px; */
+  line-height: 1.9rem;
+}
+
+/*#past,
+#present,
+#past {
+  height: 950px;
+  width: 100%; 
+}*/
+
+#past {
+  background: url("https://source.unsplash.com/lKbW5QTT3nQ/") no-repeat fixed
+    center center/cover;
+  padding: 30px 60px;
+}
+
+#present {
+  background: #abc2e1;
+  padding: 30px 60px;
+}
+
+#future {
+  background: url("https://source.unsplash.com/LzwNq8DVQzs") no-repeat fixed
+    center center/cover;
+  padding: 30px 60px;
+}
+
+footer {
+  background: #032b3f;
+  color: #8cabd1;
+  text-align: center;
+  padding: 15px;
+}
+
+/* sth {
+  color dark: (#033047) #032b3f
+  --color mid: #3E6E98
+  --color light white-ish: #CBD7EF
+  color light blue: #8CABD1
+  coor light blue lighter: #ABC2E1
+} */

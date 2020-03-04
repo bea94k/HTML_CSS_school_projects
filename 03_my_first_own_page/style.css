@@ -1,0 +1,11 @@
+body {
+  background: beige;
+  font-family: "EB Garamond", serif;
+  text-align: center;
+  line-height: 2rem;
+}
+
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+}
