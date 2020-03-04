@@ -187,7 +187,6 @@ nav a:hover {
 
 .hero-grid h1 {
   line-height: 3rem;
-  font-weight: bold;
 }
 
 .hero-grid h3 {
@@ -218,130 +217,134 @@ nav a:hover {
   display: grid;
   align-content: flex-end;
   padding: 1rem;
+  height: 100%;
   color: var(--light-color);
   text-transform: uppercase;
   text-shadow: 1px 1px 1px var(--dark-color);
   border-radius: 3px;
+}
 
+.woods-grid a {
+  text-decoration: transparent;
   transition: all 1s;
 }
 
-.woods-grid div:hover {
+.woods-grid a:hover {
   box-shadow: inset 70px -100px 90px rgba(0, 0, 0, 0.596);
-  text-decoration: underline;
+  text-decoration: underline var(--light-color);
 }
 
-#woods .woods-grid div:first-child {
+#woods .woods-grid a:first-child {
   background: url("https://source.unsplash.com/4rDCa5hBlCs/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(2) {
+#woods .woods-grid a:nth-child(2) {
   background: url("https://source.unsplash.com/sp-p7uuT0tw/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(3) {
+#woods .woods-grid a:nth-child(3) {
   background: url("https://source.unsplash.com/qLW70Aoo8BE/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(4) {
+#woods .woods-grid a:nth-child(4) {
   background: url("https://source.unsplash.com/jFCViYFYcus/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(5) {
+#woods .woods-grid a:nth-child(5) {
   background: url("https://source.unsplash.com/sMQiL_2v4vs/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(6) {
+#woods .woods-grid a:nth-child(6) {
   background: url("https://source.unsplash.com/KT3WlrL_bsg/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(7) {
+#woods .woods-grid a:nth-child(7) {
   background: url("https://source.unsplash.com/7ne3hNnojvU/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(8) {
+#woods .woods-grid a:nth-child(8) {
   background: url("https://source.unsplash.com/-heLWtuAN3c/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(9) {
+#woods .woods-grid a:nth-child(9) {
   background: url("https://source.unsplash.com/BW9bM5UoLk4/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(10) {
+#woods .woods-grid a:nth-child(10) {
   background: url("https://source.unsplash.com/7zg5bnhm2X0/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:nth-child(11) {
+#woods .woods-grid a:nth-child(11) {
   background: url("https://source.unsplash.com/PdPKIkd1L9g/1920x1080") no-repeat
     center center/cover;
 }
 
-#woods .woods-grid div:last-child {
+#woods .woods-grid a:last-child {
   background: url("https://source.unsplash.com/IrGYJPF0JS0/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:first-child {
+#personas .woods-grid a:first-child {
   background: url("https://source.unsplash.com/BTzQWyRK474/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(2) {
+#personas .woods-grid a:nth-child(2) {
   background: url("https://source.unsplash.com/aRXPJnXQ9lU/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(3) {
+#personas .woods-grid a:nth-child(3) {
   background: url("https://source.unsplash.com/zWA7Obpb4R4/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(4) {
+#personas .woods-grid a:nth-child(4) {
   background: url("https://source.unsplash.com/mKfgOMYTttU/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(5) {
+#personas .woods-grid a:nth-child(5) {
   background: url("https://source.unsplash.com/FmUmQJq-BKo/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(6) {
+#personas .woods-grid a:nth-child(6) {
   background: url("https://source.unsplash.com/15BKEU23L74/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(7) {
+#personas .woods-grid a:nth-child(7) {
   background: url("https://source.unsplash.com/EYbuaPyfkIY/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(8) {
+#personas .woods-grid a:nth-child(8) {
   background: url("https://source.unsplash.com/IvdPKHos5wA/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(9) {
+#personas .woods-grid a:nth-child(9) {
   background: url("https://source.unsplash.com/60UQhQi61mM/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:nth-child(10) {
+#personas .woods-grid a:nth-child(10) {
   background: url("https://source.unsplash.com/MVIqwQvkwG4/1920x1080") no-repeat
     center center/cover;
 }
 
-#personas .woods-grid div:last-child {
+#personas .woods-grid a:last-child {
   background: url("https://source.unsplash.com/lTebCR71_7A/1920x1080") no-repeat
     center center/cover;
 }
