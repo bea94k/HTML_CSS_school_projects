@@ -2,6 +2,7 @@
   --primary-color: rgb(3, 75, 3);
   --light-color: rgb(219, 255, 219);
   --dark-color: rgb(0, 41, 0);
+  --body-background: rgb(194, 224, 194);
 }
 
 * {
@@ -10,13 +11,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Spartan", sans-serif;
-  background: rgb(194, 224, 194);
+  background: var(--body-background);
   color: var(--dark-color);
 }
 
 .scroll-wrap {
+  background: var(--light-color);
   max-width: 1440px;
   margin: auto;
 }
@@ -34,18 +40,59 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
+p,
+h2,
+h3,
+footer a {
   line-height: 2rem;
 }
 
+p {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.up {
+  text-transform: uppercase;
+}
+
 .btn {
+  cursor: pointer;
   font-family: "Spartan", sans-serif;
   background: var(--primary-color);
   color: var(--light-color);
   width: 100px;
   height: 50px;
+  border: none;
   border-radius: 3px;
   margin: 0.5rem 0;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background: var(--dark-color);
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--dark-color);
+  width: 50px;
+  z-index: 5000;
+  visibility: hidden;
+  transition: opacity 0.5s;
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 /* HEADER - LOGO AND OUT */
@@ -56,10 +103,11 @@ header {
 
 header .container {
   display: grid;
-  grid-template-columns: 15% auto 15%;
-  /* align-items: center;
-  height: 6rem; */
-  text-transform: uppercase;
+  grid-template-columns: 25% auto 15%;
+  grid-template-rows: 4rem;
+  align-content: center;
+  padding: 1rem 0;
+  height: 7rem;
 }
 
 .out {
@@ -70,21 +118,28 @@ header .container {
 
 .logo {
   align-self: center;
+  font-size: 2rem;
+}
+
+.logo a:hover {
+  text-decoration: none;
 }
 
 header a {
   color: var(--dark-color);
   display: block;
-  padding: 1rem;
-  height: 3rem;
+  /*  padding: 1rem;
+  height: 3rem; */
 }
 
 /* NAVBAR */
 
 nav {
   background: var(--primary-color);
-  text-transform: uppercase;
   height: 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav .container {
@@ -98,11 +153,13 @@ nav ul li {
 
 nav a {
   color: var(--light-color);
+  font-size: 0.9rem;
   display: block;
   border: 3px solid transparent;
   padding: 1rem;
   height: 3rem;
   text-align: center;
+  transition: border-bottom 0.5s;
 }
 
 nav a:hover {
@@ -122,6 +179,7 @@ nav a:hover {
 
 .dropdown {
   position: relative;
+  transition: all 2s ease; /*  doesnt work on display: property?  */
 }
 
 .dropdown:hover ul {
@@ -138,10 +196,15 @@ nav a:hover {
   background: var(--light-color);
   color: var(--dark-color);
   display: block;
+  transition: all 0.5s;
 }
 
 .dropdown:hover ul a:hover {
-  background: rgb(202, 240, 202);
+  background: var(--body-background);
+}
+
+.mobile-menu {
+  display: none;
 }
 
 /* HERO BANNER */
@@ -181,8 +244,8 @@ nav a:hover {
   display: grid;
   grid-template-columns: 30vw;
   grid-template-rows: 100px 200px;
-  text-transform: uppercase;
   text-align: center;
+  text-shadow: 2px 2px 1px var(--dark-color);
 }
 
 .hero-grid h1 {
@@ -190,15 +253,11 @@ nav a:hover {
 }
 
 .hero-grid h3 {
-  line-height: 2rem;
   display: grid;
   align-content: flex-end;
 }
 
 /* EXPLORE THE WOODS & MEET THE INHABITANTS */
-.categories h2 {
-  text-transform: uppercase;
-}
 
 .categories h2,
 .woods-grid {
@@ -207,9 +266,8 @@ nav a:hover {
 
 .woods-grid {
   display: grid;
-  height: 70vh;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
   grid-gap: 1rem;
 }
 
@@ -219,12 +277,12 @@ nav a:hover {
   padding: 1rem;
   height: 100%;
   color: var(--light-color);
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px var(--dark-color);
+  text-shadow: 2px 2px 1px var(--dark-color);
   border-radius: 3px;
 }
 
 .woods-grid a {
+  font-size: 1.25rem;
   text-decoration: transparent;
   transition: all 1s;
 }
@@ -354,6 +412,7 @@ nav a:hover {
 footer {
   background: var(--primary-color);
   color: var(--light-color);
+  font-size: 0.85rem;
 }
 
 footer a {
@@ -363,9 +422,132 @@ footer a {
 footer .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 8rem;
+  grid-template-rows: 1fr repeat(3, 5fr);
+  grid-column-gap: 4rem;
+  grid-row-gap: 1.5rem;
+}
+
+.forestryFi,
+.jungleFi,
+.infoWoodland {
+  grid-column: 2;
 }
 
 .contact-terms {
   grid-column: 4;
+  grid-row: 2;
 }
+
+/* MOBILE */
+
+/*  tablets horizontal  */
+/*  grid columns 3, normal menu  */
+@media only screen and (max-width: 990px) {
+  .woods-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 150px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 40vw;
+  }
+
+  footer .container {
+    grid-column-gap: 1rem;
+  }
+}
+
+/*  tablets vertical and phones horizontal  */
+/*  grid columns 3, mobile menu  */
+/* no back to top btn */
+/* flex footer */
+@media only screen and (max-width: 768px) {
+  .top-btn {
+    visibility: hidden !important;
+  }
+
+  header {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  nav {
+    height: 4rem;
+  }
+
+  .mobile-menu {
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-menu a {
+    font-size: 2rem;
+    height: 4rem;
+  }
+
+  .mobile-menu i {
+    padding: 1rem;
+  }
+
+  .fa-bars {
+    font-size: 2rem;
+  }
+
+  /* side menu to be shown after clicking the menu icon */
+
+  .side-menu {
+    display: grid;
+    z-index: 5000;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
+
+  /* footer flex */
+  footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .container div {
+    margin-bottom: 1rem;
+  }
+}
+
+/*  phones vertical  */
+/*  grid columns 2, mobile menu  */
+/* no back to top btn */
+/* flex footer */
+/* 676px, cause the grid cells don't want to go narrower */
+@media only screen and (max-width: 676px) {
+  .hero-grid {
+    grid-template-columns: 60vw;
+  }
+
+  .woods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 150px);
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .hero-grid h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-grid h3 {
+    font-size: 1rem;
+  }
+}
+
+/* EXTRAS TO DO:
+different speed of scroll of picture and text in hero
+search - on click - pop up text input
+clean up CSS, refactor/optimize the code */

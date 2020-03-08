@@ -7,6 +7,10 @@
       href="https://fonts.googleapis.com/css?family=Spartan&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/975cc1bb85.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Forest Inc.</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -15,8 +19,8 @@
   <body>
     <div class="scroll-wrap">
       <header>
-        <div class="container">
-          <div class="logo">
+        <div class="container up">
+          <div class="logo bold">
             <a href="#">Forests</a>
           </div>
           <div class="out">
@@ -27,36 +31,50 @@
 
       <main>
         <nav>
-          <div class="container">
+          <div class="container up desktop-menu">
             <ul>
               <li><a href="#">Forest</a></li>
               <li class="dropdown">
-                <a href="#">Personas</a>
+                <a href="#personas">Personas</a>
                 <ul>
-                  <a href="#"><li>Fox</li></a>
-                  <a href="#"><li>Bear</li></a>
-                  <a href="#"><li>Owl</li></a>
-                  <a href="#"><li>Hare</li></a>
-                  <a href="#"><li>Ant</li></a>
-                  <a href="#"><li>Otter</li></a>
-                  <a href="#"><li>Weasel</li></a>
-                  <a href="#"><li>Sparrow</li></a>
-                  <a href="#"><li>Deer</li></a>
-                  <a href="#"><li>Moose</li></a>
-                  <a href="#"><li>Lynx</li></a>
+                  <a href="#personas"><li>Fox</li></a>
+                  <a href="#personas"><li>Bear</li></a>
+                  <a href="#personas"><li>Owl</li></a>
+                  <a href="#personas"><li>Hare</li></a>
+                  <a href="#personas"><li>Ant</li></a>
+                  <a href="#personas"><li>Otter</li></a>
+                  <a href="#personas"><li>Weasel</li></a>
+                  <a href="#personas"><li>Sparrow</li></a>
+                  <a href="#personas"><li>Deer</li></a>
+                  <a href="#personas"><li>Moose</li></a>
+                  <a href="#personas"><li>Lynx</li></a>
                 </ul>
               </li>
-              <li><a href="#">Woods</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Travel</a></li>
+              <li><a href="#woods">Woods</a></li>
+              <li><a href="#hero">About</a></li>
+              <li><a href="#footer">Travel</a></li>
               <li><a href="#" class="search">Search</a></li>
+            </ul>
+          </div>
+          <div class="mobile-menu">
+            <div class="side-btn"><i class="fas fa-bars"></i></div>
+            <div class="logo bold up">
+              <a href="#">Forests</a>
+            </div>
+            <div class="search"><i class="fas fa-search"></i></div>
+            <ul class="side-menu hide">
+              <li><a href="#">Forest</a></li>
+              <li><a href="#personas">Personas</a></li>
+              <li><a href="#woods">Woods</a></li>
+              <li><a href="#hero">About</a></li>
+              <li><a href="#footer">Travel</a></li>
             </ul>
           </div>
         </nav>
 
         <div id="hero">
           <div class="container">
-            <div class="hero-grid">
+            <div class="hero-grid up">
               <h1>Welcome to the woods</h1>
               <h3>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
@@ -68,13 +86,13 @@
 
         <div id="woods" class="categories">
           <div class="container">
-            <h2>Explore the woods</h2>
+            <h2 class="up">Explore the woods</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
               fugiat. Nesciunt suscipit veritatis non, maxime id fugit. Quasi
               incidunt deserunt explicabo quam doloribus ullam officiis.
             </p>
-            <div class="woods-grid">
+            <div class="woods-grid bold up">
               <a href="#"><div>Forest</div></a>
               <a href="#"><div>Woods</div></a>
               <a href="#"><div>Jungle</div></a>
@@ -93,7 +111,7 @@
 
         <div id="personas" class="categories">
           <div class="container">
-            <h2>Meet the inhabitants</h2>
+            <h2 class="up">Meet the inhabitants</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,
               fugiat. Nesciunt suscipit veritatis non, maxime id fugit. Quasi
@@ -104,35 +122,54 @@
               Reprehenderit, iusto aut est unde excepturi ut rerum in aspernatur
               error sunt.
             </p>
-            <button class="btn">Message us</button>
-            <div class="woods-grid">
-              <a href="3"><div>Fox</div></a>
-              <a href="3"><div>Bear</div></a>
-              <a href="3"><div>Owl</div></a>
-              <a href="3"><div>Hare</div></a>
-              <a href="3"><div>Ant</div></a>
-              <a href="3"><div>Otter</div></a>
-              <a href="3"><div>Weasel</div></a>
-              <a href="3"><div>Sparrow</div></a>
-              <a href="3"><div>Deer</div></a>
-              <a href="3"><div>Moose</div></a>
-              <a href="3"><div>Lynx</div></a>
+            <button class="btn msg-btn">Message us</button>
+            <div class="woods-grid bold up">
+              <a href="#"><div>Fox</div></a>
+              <a href="#"><div>Bear</div></a>
+              <a href="#"><div>Owl</div></a>
+              <a href="#"><div>Hare</div></a>
+              <a href="#"><div>Ant</div></a>
+              <a href="#"><div>Otter</div></a>
+              <a href="#"><div>Weasel</div></a>
+              <a href="#"><div>Sparrow</div></a>
+              <a href="#"><div>Deer</div></a>
+              <a href="#"><div>Moose</div></a>
+              <a href="#"><div>Lynx</div></a>
             </div>
           </div>
         </div>
       </main>
 
-      <footer>
-        <div class="container">
-          <div class="company-name">Forest Inc</div>
-          <div class="links">Links</div>
+      <footer id="footer">
+        <div class="container bold">
+          <div class="company-name up">Forests</div>
+
+          <div class="up">Links</div>
+          <div class="forestryFi">
+            <a href="#">Forestry Finland: Woods in Finland</a>
+            <p>The why and how of starting your forest in Finland.</p>
+          </div>
+          <div class="jungleFi">
+            <a href="#">Jungle.fi</a>
+            <p>
+              Residence permits and other useful information from the Finnish
+              Jungle Office.
+            </p>
+          </div>
+          <div class="infoWoodland">
+            <a href="#">InfoWoodland.fi</a>
+            <p>Information on moving to the woods, living and working here.</p>
+          </div>
+
           <div class="contact-terms">
-            <a href="#">Contact for tourists</a>
+            <a href="#">Contact for tourists</a><br />
             <a href="#">Terms of use</a>
           </div>
         </div>
       </footer>
+      <button class="btn top-btn"><i class="fas fa-level-up-alt"></i></button>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
