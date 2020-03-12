@@ -214,9 +214,14 @@ nav a:hover {
   width: 100%;
   background: var(--primary-color);
   position: relative;
+
+  /* height, overflow x and y, perspective needed for parallax effect */
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
 }
 
-#hero::before {
+/* #hero::before {
   content: "";
   background: url("https://source.unsplash.com/jwTvCQQJXh0/1920x1080") no-repeat
     center center/cover;
@@ -226,18 +231,42 @@ nav a:hover {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 #hero .container {
   color: var(--light-color);
+  padding: 0;
   display: grid;
   height: 80vh;
   justify-items: center;
   align-items: center;
-  /* MAKE SURE THIS ONE WORKS TO CENTER CENTER THE GRID INTO THE HERO BANNER
- */
   z-index: 100;
   position: relative;
+
+  /* position:rel, height needed for parallax effect */
+  height: 80vh;
+}
+
+#hero .container::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+    * then scale it back up to fill the viewport.
+    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+
+  background: url("https://source.unsplash.com/jwTvCQQJXh0/1920x1080") no-repeat
+    center center/cover;
 }
 
 .hero-grid {
