@@ -82,16 +82,12 @@ a {
 
 header {
   background: #363636;
-  min-height: 10vh;
-  max-height: 10vh;
+  height: 10vh;
+  padding: 1rem 2rem;
   width: 100%;
   z-index: 1000;
   position: fixed;
 }
-
-/* I CANT MAKE THE HEADER CONTENT CENTERED VERTICALLY LIEK IN THE HERO BANNER */
-
-/* TRY WITH POSITION ABSOLUTE OR OTHER INSTEAD OF FLEX? */
 
 /* header .container {
   flex-direction: column;
@@ -116,6 +112,7 @@ nav ul li a {
 
 nav ul li {
   list-style-type: none;
+  text-align: right;
 }
 
 nav:hover #top-nav {
@@ -136,6 +133,7 @@ nav:hover #top-nav li a {
   background: #363636;
   border: 1px solid #fff;
   width: 150px;
+  text-align: center;
 }
 
 #top-nav li:hover {

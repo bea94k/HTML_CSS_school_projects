@@ -214,40 +214,28 @@ nav a:hover {
   width: 100%;
   background: var(--primary-color);
   position: relative;
-
-  /* height, overflow x and y, perspective needed for parallax effect */
+  /* The height needs to be set to a fixed value for the effect to work.
+ 
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
   overflow-x: hidden;
+  /* Enable scrolling on the page. */
   overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
 }
 
-/* #hero::before {
-  content: "";
-  background: url("https://source.unsplash.com/jwTvCQQJXh0/1920x1080") no-repeat
-    center center/cover;
-  height: 100%;
-  width: 100%;
-  opacity: 0.75;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
-#hero .container {
+.parallax {
   color: var(--light-color);
   padding: 0;
-  display: grid;
   height: 80vh;
+  display: grid;
   justify-items: center;
   align-items: center;
   z-index: 100;
   position: relative;
-
-  /* position:rel, height needed for parallax effect */
-  height: 80vh;
 }
 
-#hero .container::after {
+.parallax::after {
   /* Display and position the pseudo-element */
   content: " ";
   position: absolute;
@@ -257,14 +245,14 @@ nav a:hover {
   left: 0;
 
   /* Move the pseudo-element back away from the camera,
-    * then scale it back up to fill the viewport.
-    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
   transform: translateZ(-1px) scale(1.5);
   /* Force the background image to fill the whole element. */
   background-size: 100%;
   /* Keep the image from overlapping sibling elements. */
   z-index: -1;
-
+  /* set background image */
   background: url("https://source.unsplash.com/jwTvCQQJXh0/1920x1080") no-repeat
     center center/cover;
 }
@@ -313,7 +301,7 @@ nav a:hover {
 .woods-grid a {
   font-size: 1.25rem;
   text-decoration: transparent;
-  transition: all 1s;
+  transition: all 0.6s;
 }
 
 .woods-grid a:hover {
