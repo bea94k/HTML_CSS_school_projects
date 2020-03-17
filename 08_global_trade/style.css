@@ -10,22 +10,42 @@ html {
 }
 
 body {
-  background: rgb(255, 255, 255);
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   height: 100%;
+  width: 100%;
+  line-height: 1.8rem;
 }
 
 /* UTILITIES: CONTAINERS, BUTTONS */
 
+.pl-1 {
+  padding-left: 1rem;
+}
+
 .container {
   min-height: 200px;
-  max-width: 350px;
-  margin: 150px 40px 40px 40px;
-  padding: 20px;
+  padding: 5rem 10rem;
 }
 
 .btn {
+  border: none;
+  border-radius: 3px;
+  font-family: "Lato", sans-serif;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
 
+.btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: "Lato", sans-serif;
+  border: none;
+  border-radius: 2px;
+  padding: 0.3rem;
 }
 
 /* HEADER */
@@ -35,7 +55,7 @@ header {
 }
 
 header img {
-  width: 30%;
+  width: 20%;
 }
 
 header ul {
@@ -44,17 +64,20 @@ header ul {
 
 header ul li {
   display: inline-block;
-  padding: 20px;
+  border-bottom: 4px solid transparent;
+  border-radius: 3px;
+  margin: 0 2rem;
 }
 
 header ul li:hover {
-  border-bottom: rgb(250, 72, 2) solid 4px;
-  border-radius: 3px;
-  /* HOW TO MAKE THE BOTTOM BORDER APPEAR ON TOP OF THE PICTURE AND NOT MOVING THE PICTURE BY THOSE 5PX ???  */
+  border-bottom: #fa4802 solid 4px;
 }
 
 header ul li a {
+  display: block;
+  padding: 20px;
   color: black;
+  font-size: 1.3rem;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -62,24 +85,101 @@ header ul li a {
 /* WELCOME SECTION */
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  line-height: 3.5rem;
+  margin-bottom: 0.4rem;
 }
 
 #welcome {
   height: 70vh;
-  background: url('ship.jpg') no-repeat fixed center center/cover;
-  padding: 20px;
+  background: url("ship.jpg") no-repeat fixed center center/cover;
+  margin-top: -4px; /* to make the link-hover-bottom-border-4px appear on the picture, not over it */
 }
 
-#welcome div {
-  background: rgb(250, 72, 2, 0.7);
-  color: rgb(255, 255, 255);
-  
+.welcome-content {
+  background: #fa4802b3;
+  color: white;
   border-radius: 10px;
+  padding: 1.2rem;
+  max-width: 450px;
+  margin-top: 10vh;
 }
 
-#welcome div button {
-  
+.btn-cta {
+  background: #3f3f3f;
+  color: white;
+  margin-top: 1rem;
 }
 
-/* TO DO: FIX FONT SIZE AND FONT FAMILY IN INPUT, TEXTAREA ETC. */
+/* ABOUT US SECTION */
+
+#about {
+  min-height: 50vh;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+}
+
+#about p {
+  max-width: 50%;
+  margin-right: 2rem;
+}
+
+#about img {
+  max-width: 45%;
+  max-height: 35vh;
+  float: right;
+  border-radius: 3px;
+}
+
+/* FOOTER - FORM */
+
+#contact {
+  background: #3f3f3f;
+  color: white;
+}
+
+#bottom-text {
+  max-width: 40%;
+  float: right;
+}
+
+#contact h2 {
+  margin-bottom: 1rem;
+}
+
+#contact h3 {
+  border-top: 1px dotted rgba(255, 255, 255, 0.24);
+  line-height: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+#around-form {
+  max-width: 45%;
+}
+
+.form-group {
+  line-height: 3rem;
+}
+
+/* name and email input fields aligned to the right + width */
+#first-name,
+#last-name,
+#email {
+  float: right;
+  margin-top: 0.8rem;
+  width: 60%;
+}
+
+#other-how {
+  height: 3rem;
+  width: 80%;
+}
+
+.btn-form-send {
+  padding: 1rem 2rem;
+  background: #fa4802;
+  color: white;
+}
